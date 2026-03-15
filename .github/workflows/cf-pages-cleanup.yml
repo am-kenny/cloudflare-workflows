@@ -28,9 +28,9 @@ jobs:
       group: cf-cleanup-${{ inputs.branch }}
       cancel-in-progress: true
     env:
-      CF_API_TOKEN: ${{ secrets[cloudflare-api-token] }}
-      CF_ACCOUNT_ID: ${{ secrets[cloudflare-account-id] }}
-      CF_PAGES_PROJECT: ${{ secrets[cloudflare-project-name] }}
+      CF_API_TOKEN: ${{ secrets.cloudflare-api-token }}
+      CF_ACCOUNT_ID: ${{ secrets.cloudflare-account-id }}
+      CF_PAGES_PROJECT: ${{ secrets.cloudflare-project-name }}
       BRANCH: ${{ inputs.branch }}
       MODE: ${{ inputs.mode }}
       COMMIT_SHA: ${{ inputs.commit-sha }}
